@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Reviews - GamesToday</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+<body>
+
+
+<header class="header">
+
+    <div class="logo">
+        🎮 GamesToday
+    </div>
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="games.html">
+            Games
+        </a>
+
+        <a href="news.html">
+            News
+        </a>
+
+        <a href="reviews.html">
+            Reviews
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main>
+
+<section class="section">
+
+<div class="container">
+
+    <span class="badge">
+        GAME REVIEWS
+    </span>
+
+    <h1 style="margin:10px 0 30px;">
+        ⭐ Latest Reviews
+    </h1>
+
+
+    <div class="game-grid">
+
+
+        <!-- REVIEW 1 -->
+
+        <article class="game-card">
+
+            <img
+                src="images/action.jpg"
+                class="game-photo"
+                alt="Action Legends"
+            >
+
+            <div class="game-card-content">
+
+                <h3>
+                    Action Legends
+                </h3>
+
+                <div class="stars">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <p>
+                    Fast action gameplay with
+                    exciting challenges.
+                </p>
+
+                <strong>
+                    Rating: 4.8 / 5
+                </strong>
+
+
+                <input
+                    type="url"
+                    class="game-link"
+                    placeholder="Paste official website link"
+                >
+
+
+                <button
+                    class="game-button"
+                    onclick="openReviewLink(this)"
+                >
+                    Visit Website
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- REVIEW 2 -->
+
+        <article class="game-card">
+
+            <img
+                src="images/racing.jpg"
+                class="game-photo"
+                alt="Speed Rush"
+            >
+
+            <div class="game-card-content">
+
+                <h3>
+                    Speed Rush
+                </h3>
+
+                <div class="stars">
+                    ⭐⭐⭐⭐☆
+                </div>
+
+                <p>
+                    Smooth racing experience
+                    with exciting tracks.
+                </p>
+
+                <strong>
+                    Rating: 4.7 / 5
+                </strong>
+
+
+                <input
+                    type="url"
+                    class="game-link"
+                    placeholder="Paste official website link"
+                >
+
+
+                <button
+                    class="game-button"
+                    onclick="openReviewLink(this)"
+                >
+                    Visit Website
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- REVIEW 3 -->
+
+        <article class="game-card">
+
+            <img
+                src="images/puzzle.jpg"
+                class="game-photo"
+                alt="Brain Quest"
+            >
+
+            <div class="game-card-content">
+
+                <h3>
+                    Brain Quest
+                </h3>
+
+                <div class="stars">
+                    ⭐⭐⭐⭐☆
+                </div>
+
+                <p>
+                    A fun puzzle experience
+                    for players who enjoy challenges.
+                </p>
+
+                <strong>
+                    Rating: 4.6 / 5
+                </strong>
+
+
+                <input
+                    type="url"
+                    class="game-link"
+                    placeholder="Paste official website link"
+                >
+
+
+                <button
+                    class="game-button"
+                    onclick="openReviewLink(this)"
+                >
+                    Visit Website
+                </button>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</div>
+
+</section>
+
+</main>
+
+
+
+<footer class="footer">
+
+    <h3>
+        🎮 GamesToday
+    </h3>
+
+    <p>
+        Gaming News • Games • Reviews
+    </p>
+
+    <p>
+        © 2026 GamesToday
+    </p>
+
+</footer>
+
+
+
+<script>
+
+function openReviewLink(button) {
+
+    const input =
+        button
+        .parentElement
+        .querySelector(".game-link");
+
+    const url =
+        input.value.trim();
+
+
+    if (!url) {
+
+        alert(
+            "Please enter a website link."
+        );
+
+        return;
+
+    }
+
+
+    try {
+
+        const parsed =
+            new URL(url);
+
+
+        if (
+            parsed.protocol !== "https:"
+        ) {
+
+            alert(
+                "Please use a valid HTTPS link."
+            );
+
+            return;
+
+        }
+
+
+        window.open(
+            url,
+            "_blank",
+            "noopener,noreferrer"
+        );
+
+
+    } catch (error) {
+
+        alert(
+            "Please enter a valid website link."
+        );
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>
